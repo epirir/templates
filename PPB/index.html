@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /*Global*/
+    :root{
+        --main-color:  #4f229d;
+        --main-font-size-header: 10px;
+        --main-font-size-details: 8px;
+        --main-font-color-template:#b71c1c;
+        --main-font-family: 'Times New Roman', Times, serif;
+    }
+
+    /*Size Page*/
+    @page { 
+        size:8.5in 11in; 
+    }
+
+    @media print {
+        @page {
+            size: letter;
+        }
+    }    
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 9cm auto;
+        padding: 0px;
+        font-size: var(--main-font-size-header);
+        font-family: var(--main-font-family);
+    }
+
+    div.dashed {
+        outline-style: dashed;
+        outline-width: 1.7px;
+        outline-color: var(--main-color);
+        padding: 5px;
+    }
+
+    div.soldTo {
+        padding: 5px;
+        height: 50%;
+    }
+
+    div.shipTo {
+        padding: 5px;
+    }
+
+    span.a{
+        color: var(--main-font-color-template);
+    }
+
+    br.custom {
+        content: "";
+        margin: 0.5em;
+        display: block;
+    }
+
+    div.details{
+        font-size: var(--main-font-size-header);
+        font-family: var(--main-font-family);
+        width: 19cm;
+    }
+
+    tr.header{
+        color: var(--main-font-color-template);
+    }
+
+    .mainTable { 
+        border: 1.5px solid var(--main-color); 
+        border-collapse: collapse; 
+        width: 100%;
+        height: 17cm;
+    }
+
+    .mainTable th, td {
+        font-weight: normal;
+        border: 1.5px solid var(--main-color);
+        padding: 0.2rem 0.4rem;
+    }
+
+    th.titles {
+        white-space: nowrap; 
+    }
+
+    .mainTable td { 
+        font-size: var(--main-font-size-details);
+        border-style: none solid; 
+        vertical-align: top; 
+        height: 50;
+    }
+
+    tr.product{
+        height: 10px;
+    }
+
+    td.description {
+        width: 17cm;
+        /* white-space: nowrap; */
+    }
+
+    td.casesAndPrice {
+        text-align: right;
+        white-space: nowrap;
+    }
+
+    td.weightAndAmount {
+        text-align: right;
+        white-space: nowrap;
+        width: 60px;
+    }
+
+    th.color{
+        color: var(--main-font-color-template);
+        background-color:#7e57c266;
+    }
+
+    .secondaryTables{
+        /* margin-top: 5px; */
+        border-collapse: collapse; 
+    }
+
+    td.secondary{
+        vertical-align: top;
+        white-space: nowrap;
+    }
+
+    td.secondaryAmount{
+        vertical-align: top;
+        white-space: nowrap;
+        text-align: right;
+    }
+
+    td.secondaryLots{
+        vertical-align: top;
+    }
+
+    th.secondary, td.secondary, td.secondaryLots, td.secondaryAmount{
+        border: transparent;
+        padding: 0rem 1rem;
+    }
+
+    td.secondaryFootTilte , td.secondaryFootAmount{
+        padding: 0rem 1rem;
+        border-left: transparent;
+        border-right: transparent;
+        border-bottom: 1.5px solid black;
+    }
+
+    td.secondaryFootTilteAmount{
+       text-align: right;
+    }
+
+    th.right{
+        text-align: right;
+    }
+
+    .resolution{
+        color: var(--main-color);
+        font-size: 8px;
+    }
+
+    div.logo{
+        width: 18cm;
+        text-align: center;
+        color: var(--main-color);
+        font-size: 12px;
+    }
+
+    .invoiceNo{
+        position: absolute;
+        color: var(--main-font-color-template);
+        font-weight: bold;
+        font-size: 12px;
+        top: 10mm;
+        left: 155mm;
+    }
+    
+</style>
+<body>
+    <div class="invoiceNo">
+        <span>INVOICE NO.</span>&nbsp;<span style="color: black;">1000</span>
+    </div>
+    <!-- Logo -->
+    <div class="logo">
+        <img src="./ppb_blue.png" alt="logo" width="130" height="70">
+        <p style="margin:0;">R.U.C.155678990-2-2019 D.V.76</p>
+        <p style="margin:0;">Albrook Field, Calle Hector Conte Bermudez, Edificio BPA,</p>
+        <p style="margin-top: 0;">Piso 2, Oficina 215, Panamá, República de Panamá</p>
+    </div>
+    <!-- Invoice Header -->
+    <div class="grid-container">
+        <div class="grid-item">
+            <div class="dashed">
+                <span class="a">INVOICE DATE: </span> 10/04/2020
+                <br class="custom">
+                <span class="a">CONFIRMATION NO.: </span> 10/04/2020
+                <br class="custom">
+                <span class="a">ORIGIN: </span> USA
+                <br class="custom">
+                <span class="a">CARRIER: </span> SEABOARD MARINE
+                <br class="custom">
+                <span class="a">CREDIT TERMS: </span> 120 DÍAS
+                <br class="custom">
+                <span class="a">SALESMAN: </span> TEXT EXAMPLE
+                <br class="custom">
+                <span class="a">SHIP DATE: </span> 10/04/2020
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="soldTo">
+                <span class="a">SOLD TO: </span>PREPARACIÓN CONMUTATIVA DE ALIMENTOS, S.A.<br>
+                <span style="margin-left:15mm">19 AVENIDA 16-30, ZONA 10 GUATEMALA, GUATEMALA</span>
+            </div>
+            <div class="shipTo">
+                <span class="a">SOLD TO: </span>PREPARACIÓN CONMUTATIVA DE ALIMENTOS, S.A.<br>
+                <span style="margin-left:15mm">19 AVENIDA 16-30, ZONA 10 GUATEMALA, GUATEMALA</span>
+            </div>
+        </div>
+    </div>
+    <br>
+    <!-- Invoice Details -->
+    <div class="details">
+        <table class="mainTable">
+            <thead>
+                <tr class="header">
+                    <th class="titles">COD No.</th>
+                    <th>DESCRIPTION</th>
+                    <th>CASES</th>
+                    <th>WEIGHT</th>
+                    <th>PRICE</th>
+                    <th>AMOUNT</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="product">
+                    <td></td>
+                    <td class="description">CUADRIL COMPLETO DE POLLO HUDSON 010620CLK, 010620CLK</td>
+                    <td class="casesAndPrice">317</td>
+                    <td class="weightAndAmount">12,680.00 lbs.</td>
+                    <td class="casesAndPrice">$0.35</td>
+                    <td class="weightAndAmount">$4,438.00</td>
+                </tr>
+                <tr class="product">
+                    <td></td>
+                    <td class="description">CARNE DE CERDO CON HUESO COSTILLA AMITY 062619, 070319, 071519, 071719, 071819, 071919, 072319, 072619, 073019, 080119, 080219, 081419, 0821</td>
+                    <td class="casesAndPrice">317</td>
+                    <td class="weightAndAmount">12,680.00 lbs.</td>
+                    <td class="casesAndPrice">$0.35</td>
+                    <td class="weightAndAmount">$4,438.00</td>
+                </tr>
+                <tr class="product">
+                    <td></td>
+                    <td class="description">CARNE DE CERDO CON HUESO COSTILLA AMITY 062619, 070319, 071519, 071719, 071819, 071919, 072319, 072619, 073019, 080119, 080219, 081419, 0821</td>
+                    <td class="casesAndPrice">317</td>
+                    <td class="weightAndAmount">58,0000.00 lbs.</td>
+                    <td class="casesAndPrice">$0.35</td>
+                    <td class="weightAndAmount">$208,800.00.00</td>
+                </tr>
+                <tr class="product">
+                    <td></td>
+                    <td class="description">CARNE DE CERDO CON HUESO COSTILLA AMITY 062619, 070319, 071519, 071719, 071819, 071919, 072319, 072619, 073019, 080119, 080219, 081419, 0821</td>
+                    <td class="casesAndPrice">317</td>
+                    <td class="weightAndAmount">58,0000.00 lbs.</td>
+                    <td class="casesAndPrice">$0.35</td>
+                    <td class="weightAndAmount">$208,800.00.00</td>
+                </tr>
+                <tr class="product">
+                    <td></td>
+                    <td class="description">CARNE DE CERDO CON HUESO COSTILLA AMITY 062619, 070319, 071519, 071719, 071819, 071919, 072319, 072619, 073019, 080119, 080219, 081419, 0821</td>
+                    <td class="casesAndPrice">317</td>
+                    <td class="weightAndAmount">58,0000.00 lbs.</td>
+                    <td class="casesAndPrice">$0.35</td>
+                    <td class="weightAndAmount">$208,800.00.00</td>
+                </tr>
+                <tr class="product">
+                    <td></td>
+                    <td class="description">CARNE DE CERDO CON HUESO COSTILLA AMITY 062619, 070319, 071519, 071719, 071819, 071919, 072319, 072619, 073019, 080119, 080219, 081419, 0821</td>
+                    <td class="casesAndPrice">317</td>
+                    <td class="weightAndAmount">58,0000.00 lbs.</td>
+                    <td class="casesAndPrice">$0.35</td>
+                    <td class="weightAndAmount">$208,800.00.00</td>
+                </tr>
+                <!-- Containers -->
+                <tr>
+                    <td></td>
+                    <td class="description">
+                        <table class="secondaryTables" style="margin-top: 10px;">
+                            <thead>
+                                <tr>
+                                    <th class="secondary">CONTENEDOR:</th>
+                                    <th class="secondary">LOTE NO.:</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="secondary">SZLU 929948-8 HUDSON</td>
+                                    <td class="secondaryLots">042919  043019  050319  050619  050719  050819  050919  051319  051419  051519</td>
+                                </tr>
+                                <tr>
+                                    <td class="secondary">SZLU 929948-8 HUDSON</td>
+                                    <td class="secondaryLots">042919  043019  050319  050619  050719  050819  050919  051319  051419  051519</td>
+                                </tr>
+                                <tr>
+                                    <td class="secondary">SZLU 929948-8 HUDSON</td>
+                                    <td class="secondaryLots">042919  043019  050319  050619  050719  050819  050919  051319  051419  051519</td>
+                                </tr>
+                                <tr>
+                                    <td class="secondary">SMLU 545524-7 HUDSON</td>
+                                    <td class="secondaryLots">020720DXT</td>
+                                </tr>
+                                <tr>
+                                    <td class="secondary">SMLU 545524-7 HUDSON</td>
+                                    <td class="secondaryLots">020720DXT</td>
+                                </tr>
+                                <tr>
+                                    <td class="secondary">SMLU 545524-7 HUDSON</td>
+                                    <td class="secondaryLots">020720DXT</td>
+                                </tr>
+                                <tr>
+                                    <td class="secondary">SMLU 545524-7 HUDSON</td>
+                                    <td class="secondaryLots">020720DXT</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <!-- Expenses -->
+                <tr>
+                   <td></td>
+                   <td class="description">
+                       <table  class="secondaryTables" style="margin-left: 34%;">
+                           <tbody>
+                               <tr>
+                                   <td class="secondary">FLETE:</td>
+                                   <td class="secondaryAmount">$21,700.00</td>
+                               </tr>
+                               <tr>
+                                    <td class="secondary">SEGURO:</td>
+                                    <td class="secondaryAmount">$180.00</td>
+                                </tr>
+                                <tr>
+                                    <td class="secondaryFootTilte">FOB:</td>
+                                    <td class="secondaryFootAmount">$67,743.39</td>
+                                </tr>
+                           </tbody>
+                           <tfoot>
+                               <tr>
+                                   <td class="secondaryFootTilte">CIF</td>
+                                   <td class="secondaryFootAmount">$70,043.39</td>
+                               </tr>
+                           </tfoot>
+                       </table>
+                   </td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <th class="color"></th>
+                <th class="color">TOTALS</th>
+                <th class="right">99,000</th>
+                <th class="right">999,000.00</th>
+                <th></th>
+                <th class="right">$999,000.00</th>
+            </tfoot>
+        </table>
+        <span class="resolution">IMPRENTA CARIBEAN, S.A. R.U.C. 58108-0083-340789 D.V. 76 2/2020 Nº 001 - 1000 • Panamá, República de Panamá</span>
+    </div>
+</body>
+</html>
