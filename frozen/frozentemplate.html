@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Frozen template</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+            @page {
+                size: 215.9mm 279.4mm;
+                margin: 170mm 150mm 180mm 150mm;
+            }
+            @media print {
+                html, body {
+                    width: 215.9mm;
+                    height: 279.4mm;
+                    margin: 0px;
+                }
+            }
+            body {
+                font-size: 8pt;
+                margin: 0;
+            }
+
+            div.logoUno{
+                position: absolute;
+                top: 18mm;
+                left: 16.2mm;
+                right: 0;
+                width: 200px;
+                height: 100px;
+                border: none;
+                /* border: 3px solid #73AD21; */
+            }
+
+            div.logo2 {
+                position: absolute;
+                top: 6mm;
+                left: 167.9mm;
+                right: 0;
+                width: 200px;
+                height: 100px;
+                /* border: 3px solid #73AD21; */
+            }
+
+            .title1 {
+                position: absolute;
+                top: 30mm;
+                left: 59mm;
+                font-size: 3.7mm;
+                font-style:oblique;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight:bold;
+                text-align: left;
+                color: #3f51b5;  
+                /* width: 500px;
+                height: 100px; */
+                padding: 10px;     
+            }
+
+            .soldTo{
+                position: absolute;
+                top: 54.1mm;
+                left: 15.6mm; 
+                color: #3f51b5; 
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 3.1mm;
+            }
+
+            .shipTo{
+                position: absolute;
+                top: 54.1mm;
+                left: 129.6mm; 
+                color: #3f51b5; 
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 3.1mm;
+            }
+
+            #body1 {
+                position: absolute;
+                top: 83mm;
+                left: 14mm;
+                border-radius: 20px;
+                border: 2px solid #3f51b5;
+                padding: 20px; 
+                width: 180mm;
+                height: 173mm;  
+            }
+
+            .footer {
+                position: absolute;
+                top: 270mm;
+                left: 9.7mm;
+                font-size: 4.3mm;
+                font-style:oblique;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight:bold;
+                text-align: center;
+                color: #3f51b5;  
+                width: 700px;
+                height: 100px;
+                padding: 10px;     
+            }
+
+            .Horizontal1 {
+                position: absolute;
+                top: 89.4mm;
+                left: 14.1mm;
+                width: 191mm;
+                /* font-size: 1px; */
+                line-height: 2px;
+                background-color: #3f51b5;
+            }
+
+            .rrelleno1 {
+                position: absolute;    
+                top: 83.4mm;
+                left: 14.81mm;    
+                border-radius:  100px 100px 0px 0px;
+                opacity: 0.8;
+                background: url("dot.PNG");
+                padding: 6px; 
+                width: 186.8mm;
+                height: 0.1mm;
+            }
+
+            .Horizontal2 {
+                position: absolute;
+                top: 97.5mm;
+                left: 14.1mm;
+                width: 191mm;
+                /* font-size: 1px; */
+                line-height: 2px;
+                background-color: #3f51b5;
+            }
+
+            .rrelleno2 {
+                position: absolute;    
+                top: 95.2mm;
+                left: 14.5mm;    
+                opacity: 0.8;
+                background: url("dot.PNG");
+                padding: 7px; 
+                width: 186.8mm;
+                /* height: 1.05mm; */
+            }
+
+            .Horizontal3 {
+                position: absolute;
+                top: 101mm;
+                left: 14.1mm;
+                width: 191mm;
+                /* font-size: 1px; */
+                line-height: 2px;
+                background-color: #3f51b5;
+            }
+
+            .Horizontal4 {
+                position: absolute;
+                top: 111.1mm;
+                left: 14.1mm;
+                width: 191mm;
+                /* font-size: 1px; */
+                line-height: 2px;
+                background-color: #3f51b5;
+            }
+
+            .rrelleno3 {
+                position: absolute;    
+                top: 108.7mm;
+                left: 14.5mm;    
+                opacity: 0.8;
+                background: url("dot.PNG");
+                padding: 7.5px; 
+                width: 186.8mm;
+                /* height: 1.05mm; */
+            }
+
+            .Horizontal5 {
+                position: absolute;
+                top: 114.7mm;
+                left: 14.1mm;
+                width: 191mm;
+                /* font-size: 1px; */
+                line-height: 2px;
+                background-color: #3f51b5;
+            }
+
+            .Horizontal6 {
+                position: absolute;
+                top: 255mm;
+                left: 14.1mm;
+                width: 191mm;
+                /* font-size: 1px; */
+                line-height: 2px;
+                background-color: #3f51b5;
+            }
+
+            .Horizontal7 {
+                position: absolute;
+                top: 263mm;
+                left: 14.1mm;
+                width: 191mm;
+                /* font-size: 1px; */
+                line-height: 2px;
+                background-color: #3f51b5;
+            }
+
+            .customerNo{
+                position: absolute;
+                top: 86.5mm;
+                left: 22mm; 
+                color: white; 
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 2.7mm;
+                font-weight:bold;
+            }
+
+            .vl {
+                top: 85.7mm;
+                left: 55mm;
+                border-left: 1px solid white;
+                height: 16px;
+                position: absolute;
+                /* left: 40%; */
+            }
+
+            .vll {
+                top: 90mm;
+                left: 55mm;
+                border-left: 1px solid #3f51b5;
+                height: 30px;
+                position: absolute;
+                /* left: 40%; */
+            }
+
+            .confNo{
+                position: absolute;
+                top: 86.5mm;
+                left: 62mm; 
+                color: white; 
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 2.7mm;
+                font-weight:bold;
+            }
+
+            .vl2 {
+                top: 85.7mm;
+                left: 94mm;
+                border-left: 1px solid white;
+                height: 16px;
+                position: absolute;
+                /* left: 40%; */
+            }
+
+            .vll2 {
+                top: 90mm;
+                left: 94mm;
+                border-left: 1px solid #3f51b5;
+                height: 30px;
+                position: absolute;
+                /* left: 40%; */
+            }
+
+            .invoiceDate{
+                position: absolute;
+                top: 86.5mm;
+                left: 104mm; 
+                color: white; 
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 2.7mm;
+                font-weight:bold;
+            }
+
+            .vl3 {
+                top: 85.7mm;
+                left: 133mm;
+                border-left: 1px solid white;
+                height: 16px;
+                position: absolute;
+                /* left: 40%; */
+            }
+
+            .vll3 {
+                top: 90mm;
+                left: 133mm;
+                border-left: 1px solid #3f51b5;
+                height: 30px;
+                position: absolute;
+                /* left: 40%; */
+            }
+
+            .invoiceNo{
+                position: absolute;
+                top: 86.5mm;
+                left: 142mm; 
+                color: white; 
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 2.7mm;
+                font-weight:bold;
+            }
+
+            .vl4 {
+                top: 85.8mm;
+                left: 167mm;
+                border-left: 1px solid white;
+                height: 16px;
+                position: absolute;
+                /* left: 40%; */
+            }
+
+            .vll4 {
+                top: 90mm;
+                left: 167mm;
+                border-left: 1px solid #3f51b5;
+                height: 30px;
+                position: absolute;
+                /* left: 40%; */
+            }
+
+            .salsesman {
+                position: absolute;
+                top: 86.5mm;
+                left: 178mm; 
+                color: white; 
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 2.7mm;
+                font-weight:bold;
+            }
+
+            .shipDate {
+                position: absolute;
+                top: 98.4mm;
+                left: 22mm; 
+                color: white; 
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 2.7mm;
+                font-weight:bold;
+            }
+
+            .vl5 {
+                top: 98.02mm;
+                left: 49.1mm;
+                border-left: 1px solid white;
+                height: 11px;
+                position: absolute;
+                /* left: 40%; */
+            }
+
+            .vll5 {
+                top: 101mm;
+                left: 49.1mm;
+                border-left: 1px solid #3f51b5;
+                height: 40px;
+                position: absolute;
+                /* left: 40%; */
+            }
+
+            .carrier {
+                position: absolute;
+                top: 98.4mm;
+                left: 70mm; 
+                color: white; 
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 2.7mm;
+                font-weight:bold;
+            }
+
+            .vl6 {
+                top: 98.02mm;
+                left: 105mm;
+                border-left: 1px solid white;
+                height: 11px;
+                position: absolute;
+                /* left: 40%; */
+            }
+
+            .vll6 {
+                top: 101mm;
+                left: 105mm;
+                border-left: 1px solid #3f51b5;
+                height: 40px;
+                position: absolute;
+                /* left: 40%; */
+            }
+
+            .customerPoNo {
+                position: absolute;
+                top: 98.4mm;
+                left: 118mm; 
+                color: white; 
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 2.7mm;
+                font-weight:bold;
+            }
+
+            .vl7 {
+                top: 98.02mm;
+                left: 155mm;
+                border-left: 1px solid white;
+                height: 11px;
+                position: absolute;
+                /* left: 40%; */
+            }
+
+            .vll7 {
+                top: 101mm;
+                left: 155mm;
+                border-left: 1px solid #3f51b5;
+                height: 40px;
+                position: absolute;
+                /* left: 40%; */
+            }
+
+            .creditT {
+                position: absolute;
+                top: 98.4mm;
+                left: 170mm; 
+                color: white; 
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 2.7mm;
+                font-weight:bold;
+            }
+
+            .codeNo {
+                position: absolute;
+                top: 112mm;
+                left: 22mm; 
+                color: white; 
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 2.7mm;
+                font-weight:bold;
+            }
+
+            .vl8 {
+                top: 111mm;
+                left: 40mm;
+                border-left: 1px solid white;
+                height: 14px;
+                position: absolute;
+                /* left: 40%; */
+            }
+
+            .vll8 {
+                top: 115mm;
+                left: 40mm;
+                border-left: 1px solid #3f51b5;
+                height: 530px;
+                position: absolute;
+                /* left: 40%; */
+            }
+
+            .pDesc {
+                position: absolute;
+                top: 112mm;
+                left: 60mm; 
+                color: white; 
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 2.7mm;
+                font-weight:bold;
+            }
+
+            .vl9 {
+                top: 111mm;
+                left: 111mm;
+                border-left: 1px solid white;
+                height: 14px;
+                position: absolute;
+                /* left: 40%; */
+            }
+
+            .vll9 {
+                top: 115mm;
+                left: 111mm;
+                border-left: 1px solid #3f51b5;
+                height: 560px;
+                position: absolute;
+                /* left: 40%; */
+            }
+
+            .cases {
+                position: absolute;
+                top: 112mm;
+                left: 115mm; 
+                color: white; 
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 2.7mm;
+                font-weight:bold;
+            }
+
+            .vl10 {
+                top: 111mm;
+                left: 128mm;
+                border-left: 1px solid white;
+                height: 14px;
+                position: absolute;
+                /* left: 40%; */
+            }
+
+            .vll10 {
+                top: 115mm;
+                left: 128mm;
+                border-left: 1px solid #3f51b5;
+                height: 560px;
+                position: absolute;
+                /* left: 40%; */
+            }
+
+            .weight {
+                position: absolute;
+                top: 112mm;
+                left: 139mm;
+                color: white; 
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 2.7mm;
+                font-weight:bold;
+            }
+
+            .vl11 {
+                top: 111mm;
+                left: 158mm;
+                border-left: 1px solid white;
+                height: 14px;
+                position: absolute;
+                /* left: 40%; */
+            }
+
+            .vll11 {
+                top: 115mm;
+                left: 158mm;
+                border-left: 1px solid #3f51b5;
+                height: 560px;
+                position: absolute;
+                /* left: 40%; */
+            }
+
+            .price {
+                position: absolute;
+                top: 112mm;
+                left: 163mm;
+                color: white; 
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 2.7mm;
+                font-weight:bold;
+            }
+
+            .vl12 {
+                top: 111mm;
+                left: 176mm;
+                border-left: 1px solid white;
+                height: 14px;
+                position: absolute;
+                /* left: 40%; */
+            }
+
+            .vll12 {
+                top: 115mm;
+                left: 176mm;
+                border-left: 1px solid #3f51b5;
+                height: 560px;
+                position: absolute;
+                /* left: 40%; */
+            }
+
+            .amount {
+                position: absolute;
+                top: 112mm;
+                left: 184mm;
+                color: white; 
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 2.7mm;
+                font-weight:bold;
+            }
+
+            .vll13 {
+                top: 263mm;
+                left: 102mm;
+                border-left: 1px solid #3f51b5;
+                height: 26px;
+                position: absolute;
+                /* left: 40%; */
+            }
+
+            .rrelleno4 {
+                position: absolute;    
+                top: 260.8mm;
+                left: 102.1mm;    
+                border-radius:  0px 0px 20px 0px;
+                opacity: 0.8;
+                background: url("dot.PNG");
+                padding: 6px; 
+                width: 100mm;
+                height: 3mm;
+            }
+
+            .totals{
+                position: absolute;
+                top: 258.3mm;
+                left: 80mm;
+                color: #3f51b5; 
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 2.6mm;
+            }
+
+            .received{
+                position: absolute;
+                top: 265.4mm;
+                left: 20mm;
+                color: #3f51b5; 
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 2.6mm;
+                font-weight:bold;
+            }
+
+            /* print data that the user writes */
+            
+            .dshipTo{
+                position: absolute;
+                top: 58mm;
+                left: 22mm;
+                width: 370px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 3mm;
+            }
+
+            .dshipToAd {
+                position: absolute;
+                top: 59mm;
+                left: 20mm;
+                display: inline; 
+                width: 115px;
+                height: 80px;
+                padding: 10px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 3mm;
+            }
+
+            .dsoldTo{
+                position: absolute;
+                top: 58mm;
+                left: 134mm;
+                width: 280px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 3mm;
+            }
+
+            .dsoldToAd {
+                position: absolute;
+                top: 59mm;
+                left: 132mm;
+                display: inline; 
+                width: 230px;
+                height: 250px;
+                padding: 10px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 3mm;
+            }
+
+            .dsoldToAd2{
+                position: absolute;
+                top: 62mm;
+                left: 131mm;
+                display: inline; 
+                width: 230px;
+                height: 250px;
+                padding: 10px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 3mm;
+            }
+
+            .dcustomerNo{
+                position: absolute;
+                top: 93mm;
+                left: 22mm;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 3mm;
+            }
+
+            .dconfNo{
+                position: absolute;
+                top: 93mm;
+                left: 62mm;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 3mm;
+            }
+
+            .dinvoiceD{
+                position: absolute;
+                top: 93mm;
+                left: 104mm;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 3mm;
+            }
+
+            .dinvoiceNo{
+                position: absolute;
+                top: 93mm;
+                left: 142mm;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 3mm;
+            }
+
+            .dsalesman{
+                position: absolute;
+                top: 93mm;
+                left: 178mm;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 3mm;
+            }
+
+            .dshipDate{
+                position: absolute;
+                top: 105mm;
+                left: 22mm;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 3mm;
+            }
+
+            .dcarrier{
+                position: absolute;
+                top: 105mm;
+                left: 71mm;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 3mm;
+            }
+
+            .dcustomerPoNo{
+                position: absolute;
+                top: 105mm;
+                left: 119mm;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 3mm;
+            }
+
+            .dcreditT{
+                position: absolute;
+                top: 105mm;
+                left: 174mm;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 3mm;
+            }
+
+            .details {
+                position: absolute;
+                top: 119mm;
+                width: 100%;
+            }
+            .code {
+                position: absolute;
+                left: 22mm;
+            }
+            .desc {
+                position: absolute;
+                left: 41mm;
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 11px;
+            }
+            .descLen {
+                position: absolute;
+                left: 41mm;
+                width:244px;
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 11px;
+                text-align: justify;
+            }
+            .dcases {
+                position: absolute;
+                width: 126mm;
+                text-align: right;
+            }
+            .dweight {
+                position: absolute;
+                width: 156mm;
+                text-align: right;
+            }
+            .dprice {
+                position: absolute;
+                width: 175mm;
+                text-align: right;
+            }
+            .damount {
+                position: absolute;
+                width: 202mm;
+                text-align: right;
+            }
+
+            .sales {
+                position: absolute;
+                top: 227mm;
+                width: 100mm;
+            }
+            .saleNo {
+                position: absolute;
+                left: 42mm;
+                width: 50mm;
+            }
+            .salesTitle {
+                position: absolute;
+                left: 42mm;
+                width: 50mm;
+            }
+             .totCases {
+                position: absolute;
+                top: 258mm;
+                /* left: 119mm; */
+                width: 126mm;
+                text-align: right;
+            }
+            .totWeight {
+                position: absolute;
+                top: 258mm;
+                /* left: 139mm; */
+                width: 156mm;
+                text-align: right;
+            }
+            .totAmount {
+                position: absolute;
+                top: 258mm;
+                /* left: 183mm; */
+                width: 202mm;
+                text-align: right;
+            }
+        
+        </style>
+            </head>
+            <body>
+            <div class="logoUno">
+                    <img src="frozenlg1.png" alt="logo" width="160" height="118">
+                </div>       
+                <div class="logo2">
+                        <img src="invoice.png" alt="logo" width="127" height="26">
+                </div>
+                <span class="title1">
+                    Edificio Ocean Plaza, piso 16, Ofícina 6 <br>
+                    Esq. Av. Aquilino de la Guardia y Calle 47, Urb. Marbella <br>
+                    Panama, Ciudad de Panama <br>
+                    Tel.: 1 (507) 205-6648
+                </span>
+                <span class="soldTo">
+                    SOLD TO:
+                </span>
+                <span class="shipTo">
+                    SHIP TO:
+                </span>
+                <p id="body1">
+                </p>
+                <span class="Horizontal1">.
+                </span>
+                <p class="rrelleno1">
+                </p>
+                <span class="Horizontal2">.
+                </span>
+                <p class="rrelleno2">
+                </p>
+                <span class="Horizontal3">.
+                </span>
+                <span class="Horizontal4">.
+                </span>
+                <p class="rrelleno3">
+                </p>
+                <span class="Horizontal5">.
+                </span>
+                <span class="Horizontal6">.
+                </span>
+                <span class="Horizontal7">.
+                </span>
+                <span class="customerNo">
+                    CUSTOMER No.
+                </span>
+                <span class="vl"></span>
+                <span class="vll"></span>
+                <span class="confNo">
+                    CONFIRMATION No.
+                </span>
+                <span class="vl2"></span>
+                <span class="vll2"></span>
+                <span class="invoiceDate">
+                    INVOICE DATE
+                </span>
+                <span class="vl3"></span>
+                <span class="vll3"></span>
+                <span class="invoiceNo">
+                    INVOICE No.
+                </span>
+                <span class="vl4"></span>
+                <span class="vll4"></span>
+                <span class="salsesman">
+                    SALESMAN
+                </span>
+                <span class="shipDate">
+                    SHIP DATE
+                </span>
+                <span class="vl5"></span>
+                <span class="vll5"></span>
+                <span class="carrier">
+                    CARRIER
+                </span>
+                <span class="vl6"></span>
+                <span class="vll6"></span>
+                <span class="customerPoNo">
+                    CUSTOMER PO. No.
+                </span>
+                <span class="vl7"></span>
+                <span class="vll7"></span>
+                <span class="creditT">
+                    CREDIT TERMS
+                </span>
+                <span class="codeNo">
+                    COD No.
+                </span>
+                <span class="vl8"></span>
+                <span class="vll8"></span>
+                <span class="pDesc">
+                    PRODUCT DESCRIPTION
+                </span>
+                <span class="vl9"></span>
+                <span class="vll9"></span>
+                <span class="cases">
+                    CASES
+                </span>
+                <span class="vl10"></span>
+                <span class="vll10"></span>
+                <span class="weight">
+                    WEIGHT
+                </span>
+                <span class="vl11"></span>
+                <span class="vll11"></span>
+                <span class="price">
+                    PRICE
+                </span>
+                <span class="vl12"></span>
+                <span class="vll12"></span>
+                <span class="amount">
+                    AMOUNT
+                </span>
+                <span class="vll13"></span>
+                <p class="rrelleno4">
+                </p>
+                <span class="totals">
+                    TOTALS
+                </span>
+                <span class="received">
+                    RECEIVED BY:
+                </span>
+
+                <!-- /* print data that the user writes */ -->
+
+                <span class="dshipTo" >
+                    
+                </span>
+                <span class="dshipToAd">
+                    
+                </span>
+                <span class="dsoldTo" >
+                    <!-- VERRADO FOODS CC -->
+
+                </span>
+                <span class="dsoldToAd">
+                    
+                </span>
+                <span class="dcustomerNo">
+                    
+                </span>
+                <span class="dconfNo">
+                    
+                </span>
+                <span class="dinvoiceD">
+                    
+                </span>
+                <span class="dinvoiceNo">
+                    
+                </span>
+                <span class="dsalesman">
+                    
+                </span>
+                <span class="dshipDate">
+                   
+                </span>
+                <span class="dcarrier">
+                    
+                </span>
+                <span class="dcustomerPoNo">
+                    
+                </span>
+                <span class="dcreditT">
+                    
+                </span>
+                <div class="details">
+                        <span class="code">
+                            
+                        </span>
+                        <span class="desc">
+                           
+                        </span>
+                        <span class="descLen">
+                            
+                        </span>
+                        <!-- <br> -->
+                        
+                        <!-- <br> -->
+                       
+                        <span class="dcases" style="text-align: right">
+                            
+                        </span>
+                        <span class="dweight">
+                            
+                        </span>
+                        <span class="dprice">
+                            
+                        </span>
+                        <span class="damount">
+                            
+                        </span>
+                        <br>
+                    </div>
+                    <div class="sales">
+                        <span class="salesTitle">
+                            
+                        </span>
+                        <br>
+                        <span class="saleNo">
+                            
+                        </span>
+                        <br>
+                        <span class="saleNo">
+                          
+                        </span>
+                        <br>
+                        <span class="saleNo">
+                           
+                        </span>
+                        <br>
+                        <span class="saleNo">
+                            
+                        </span>
+                        <br>
+                        <span class="saleNo">
+                            
+                        </span>
+                        <br>
+                        <span class="saleNo">
+                            
+                        </span>
+                        <br>
+                    </div>
+                    <span class="totCases">
+                       
+                    </span>
+                    <span class="totWeight">
+                        
+                    </span>
+                    <span class="totAmount">
+                        
+                    </span>
+        </body>
+</html>
