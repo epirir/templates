@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FEL FUSIONES</title>
+  </head>
+  <style>
+    /*Global*/
+    :root {
+      --main-color: #4f229d;
+      --main-font-size-header: 10px;
+      --main-font-size-details: 10px;
+      --main-font-color-template: black;
+      --main-font-family: "Times New Roman", Times, serif;
+    }
+    /*Size Page*/
+    @page {
+      size: 8.5in 11in;
+    }
+
+    @media print {
+      @page {
+        size: letter;
+      }
+    }
+
+    .fac {
+      position: absolute;
+      color: var(--main-font-color-template);
+      font-weight: bold;
+      font-size: 12px;
+      font-family: var(--main-font-family);
+      text-align: center;
+      top: 5mm;
+      left: 125mm;
+    }
+    .border {
+      padding: 20px;
+      border: 1px solid var(--main-font-color-template);
+    }
+
+    div.logo {
+      position: absolute;
+      left: -50mm;
+    }
+    div.logoText {
+      width: 18cm;
+      text-align: center;
+      font-family: var(--main-font-family);
+      font-size: 14px;
+    }
+
+    .grid-container {
+      position: absolute;
+      top: 40mm;
+      display: grid;
+      grid-template-columns: 9cm auto;
+      padding: 0px;
+      font-size: 12px;
+      font-family: var(--main-font-family);
+    }
+
+    span.a {
+      font-weight: bold;
+      font-size: 12px;
+      font-family: var(--main-font-family);
+    }
+
+    span.b {
+      font-size: 12px;
+      font-family: var(--main-font-family);
+    }
+
+    br.custom {
+      content: "";
+      margin: 0.5em;
+      display: block;
+    }
+
+	div.cambiariaText {
+		width: 100mm;
+		text-align: justify;
+		font-size: 10px;
+      	font-family: var(--main-font-family);
+		margin-left: 3mm;
+        height: 40%;
+    }
+
+	/* Details */
+	div.details{
+		position: absolute;
+		top: 70mm;
+        font-size: var(--main-font-size-header);
+        font-family: var(--main-font-family);
+        width: 19.3cm;
+    }
+
+	tr.header{
+        color: var(--main-font-color-template);
+    }
+
+    .mainTable {
+        border: 1.5px solid var(--main-color); 
+        border-collapse: collapse; 
+        width: 100%;
+        height: 8cm;
+    }
+
+    .mainTable th, td {
+        font-weight: normal;
+        border: 1.5px solid var(--main-color);
+        padding: 0.2rem 0.4rem;
+    }
+
+	th.titles {
+        white-space: nowrap; 
+    }
+
+    .mainTable td { 
+        font-size: var(--main-font-size-details);
+        border-style: none solid; 
+        vertical-align: top; 
+        height: 50;
+    }
+
+    tr.product{
+        height: 10px;
+    }
+
+	td.code {
+		text-align: right;
+        width: 1.5cm;
+        /* white-space: nowrap; */
+    }
+
+    td.description {
+        width: 17cm;
+        /* white-space: nowrap; */
+    }
+
+    td.casesAndPrice {
+        text-align: right;
+        white-space: nowrap;
+    }
+
+    td.weightAndAmount {
+        text-align: right;
+        white-space: nowrap;
+        width: 65px;
+    }
+
+	td.casesAndPrice {
+        text-align: right;
+        white-space: nowrap;
+    }
+
+	th.left{
+        text-align: left;
+    }
+
+	.certificacion{
+		text-align: center;
+		font-weight: bold;
+		font-size: 12px;
+	}
+
+  </style>
+  <body>
+    <!-- Logo -->
+    <div class="logo">
+      <div class="logoText">
+		<img src="./fusionesFelLogo.png" alt="logo"/>
+		<p style="margin: 0">Fusiones Alimenticias, Sociedad Anónima.</p>
+        <p style="margin: 0">17 Calle "A" 18-86, Zona 10</p>
+        <p style="margin: 0">Guatemala, Guatemala</p>
+        <p style="margin-top: 0; font-weight: bold">NIT.: 7671027-0</p>
+      </div>
+    </div>
+    <div class="fac">
+      <div class="border">
+        <span>NOTA DE CRÉDITO ELECTRÓNICA</span><br/>
+        <span>LIBRE DE PROTESTO</span><br/>
+        <span>SERIE:</span>&nbsp;<span style="color: #b71c1c">93DDCD45</span><br/>
+        <span>NÚMERO:</span>&nbsp;<span style="color: #b71c1c">560744143</span>
+      </div>
+      <span style="color: #b71c1c">fecha de certificación: 2020-10-13T07:40:09-06:00</span>
+	</div>
+    <!-- Invoice Header -->
+	<div class="grid-container">
+      <div class="grid-item">
+			<span class="a">FECHA DE EMISIÓN: </span><span class="b">13/10/2020</span>
+			<br class="custom" />
+			<span class="a">NOMBRE: </span><span class="b">CONSUMIDOR FINAL</span>
+			<br class="custom" />
+			<span class="a">DIRECCION: </span><span class="b">CIUDAD</span>
+			<br class="custom" />
+			<span class="a">NIT: </span><span class="b">C/F</span>
+    </div>
+      <div class="grid-item">
+		</div>
+	</div>
+	<!-- Invoice Details -->
+	<div class="details">
+		<table class="mainTable">
+			<thead>
+				<tr class="header">
+					<th class="titles">CÓDIGO</th>
+					<th>CANTIDAD</th>
+					<th>DESCRIPCIÓN</th>
+					<th>P/UNITARIO</th>
+					<th>VALOR</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="product">
+					<td class="code">08</td>
+					<td class="weightAndAmount">58,0000.00 lbs.</td>
+					<td class="description">Cuadril 4x10 Hudson (1362)</td>
+					<td class="casesAndPrice">3.50</td>
+					<td class="weightAndAmount">203,000.00</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+      </tr>
+			</tbody>
+			<tfoot>
+				<th></th>
+				<th></th>
+				<th class="left">TOTAL EN LETRAS: DOSCIENTOS TRES MIL CON CERO CON 00/100</th>
+				<th></th>
+				<th>203,000.00</th>
+			</tfoot>
+		</table>
+		<div class="certificacion">
+			<p style="margin-bottom: 0mm;">No. AUTORIZACIÓN: 93DDCD45-216C-46CF-900F-F3397AE5CA33</p>
+			<p style="margin: 0">CERTIFICADOR: MEGAPRINT, S.A.</p>
+			<p style="margin: 0">NIT: 50510231</p>
+		</div>
+	</div>
+  </body>
+</html>
